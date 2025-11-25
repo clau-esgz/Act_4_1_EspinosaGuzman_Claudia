@@ -127,6 +127,4 @@
   transition: all 0.18s;
 }
 
-.btn-enviar:hover {
-  border-color: #FCB24B;
-}
+/* Hover for blue/yellow handled by global classes (.btn-azul, .btn-amarillo) */

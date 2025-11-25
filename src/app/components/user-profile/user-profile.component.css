@@ -58,9 +58,6 @@
   transition: all 0.2s;
 }
 
-.btn-editar:hover {
-  border-color: #FCB24B;
-}
 
 .info-perfil {
   flex: 1;
@@ -97,6 +94,4 @@
   transition: all 0.2s;
 }
 
-.btn-cerrar-sesion:hover {
-  border-color: #FCB24B;
-}
+/* hover behavior handled by button-specific classes in global styles */

@@ -4,17 +4,9 @@ import { CommonModule } from '@angular/common';
 @Component({
   // Nombre con el que este componente se puede usar en el HTML
   selector: 'app-header',
-
-  // Indica que este componente funciona sin necesitar un módulo externo
   standalone: true,
-
-  // Módulos extras que este componente requiere
   imports: [CommonModule],
-
-  // Archivo donde está el HTML del header
   templateUrl: './header.component.html',
-
-  // Archivo donde está el CSS para este componente
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
