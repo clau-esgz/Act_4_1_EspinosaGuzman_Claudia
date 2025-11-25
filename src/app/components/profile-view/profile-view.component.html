@@ -1,3 +1,4 @@
+<!--vista que combina header, perfil y lista de tutorías-->
 <app-header></app-header>
 
 <div class="vista-perfil">
@@ -6,12 +7,14 @@
   <div class="seccion-tutorias">
     <h2 class="titulo-seccion">Mis tutorías</h2>
     
+    <!--pestañas para cambiar entre próximas y anteriores-->
     <app-tabs 
       [pestanas]="pestanas" 
       [pestanaActiva]="pestanaActiva"
       (cambioPestana)="alCambioPestana($event)">
     </app-tabs>
 
+    <!--lista: renderiza una tarjeta por cada tutoría-->
     <div class="lista-tutorias">
       <app-tutoring-card 
         *ngFor="let tutoria of tutorias"
@@ -24,12 +27,6 @@
   </div>
 </div>
 
-<app-modal-calificacion 
-  *ngIf="mostrarModal"
-  (cerrar)="cerrarModal()">
-</app-modal-calificacion>
-
-<app-modal-recordatorio
-  *ngIf="mostrarModalRecordatorio"
-  (cerrar)="cerrarModalRecordatorio()">
-</app-modal-recordatorio>
+<!--modales: calificación y recordatorio, se muestran según estado--> 
+<app-modal-calificacion *ngIf="mostrarModal" (cerrar)="cerrarModal()"></app-modal-calificacion>
+<app-modal-recordatorio *ngIf="mostrarModalRecordatorio" (cerrar)="cerrarModalRecordatorio()"></app-modal-recordatorio>

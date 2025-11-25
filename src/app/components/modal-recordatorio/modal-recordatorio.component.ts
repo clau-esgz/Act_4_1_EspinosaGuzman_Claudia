@@ -9,19 +9,17 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./modal-recordatorio.component.css']
 })
 export class ModalRecordatorioComponent {
+  //evento para notificar que se cierra el modal
   @Output() cerrar = new EventEmitter<void>();
+  //opción elegida por el usuario
   opcionSeleccionada: string = '';
 
-  seleccionar(opcion: string) {
-    this.opcionSeleccionada = opcion;
-  }
+  //selecciona una opción de recordatorio
+  seleccionar(opcion: string) { this.opcionSeleccionada = opcion; }
 
-  alEstablecer() {
-    console.log('Recordatorio establecido:', this.opcionSeleccionada);
-    this.cerrar.emit();
-  }
+  //establece el recordatorio y cierra el modal
+  alEstablecer() { console.log('Recordatorio establecido:', this.opcionSeleccionada); this.cerrar.emit(); }
 
-  alCerrar() {
-    this.cerrar.emit();
-  }
+  //cierra el modal sin guardar
+  alCerrar() { this.cerrar.emit(); }
 }

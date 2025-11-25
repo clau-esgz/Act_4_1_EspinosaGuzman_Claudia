@@ -1,7 +1,9 @@
+<!--componente: tarjeta que muestra una tutoría--> 
 <div class="tarjeta-tutoria">
   <div class="info-tutoria">
     <h3 class="materia">{{ tutoria.nombreMateria }}</h3>
     <div class="detalles-tutoria">
+        <!--columna: fecha y número/icono debajo de la etiqueta-->
         <div class="detalle-col">
           <span class="etiqueta">Fecha</span>
           <div class="alumnos">
@@ -14,6 +16,7 @@
             <span class="valor numero-alumnos">{{ tutoria.fecha }}</span>
           </div>
         </div>
+        <!--columna: horario-->
         <div class="detalle-col">
           <span class="etiqueta">Horario</span>
           <div class="detalle-valor valor">{{ tutoria.horario }}</div>
@@ -21,6 +24,7 @@
     </div>
   </div>
   
+  <!--botón: su texto y color dependen de la pestaña activa-->
   <button 
     class="btn-calificar" 
     [style.background]="colorBoton"

@@ -4,6 +4,8 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/*componente: estilos para la cabecera (logo, búsqueda e iconos)*/
+
 .contenido-encabezado {
   max-width: 100%;
   margin: 0;

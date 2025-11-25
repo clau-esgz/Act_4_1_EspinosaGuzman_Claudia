@@ -23,6 +23,8 @@
 .encabezado-modal {
   position: relative;
   display: flex;
+
+/* componente: estilos para el modal de calificación */
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;

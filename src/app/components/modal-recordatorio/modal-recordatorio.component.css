@@ -7,6 +7,8 @@
   justify-content:center;
   z-index: 2000;
 }
+
+/*componente: estilos para el modal de recordatorio*/
 .modal{
   background:#fff;
   border-radius:18px;

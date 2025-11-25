@@ -16,24 +16,23 @@ export interface Tutoria {
   styleUrls: ['./tutoring-card.component.css']
 })
 export class TutoringCardComponent {
+  //entrada: datos de la tutoría a mostrar
   @Input() tutoria!: Tutoria;
+  //entrada: pestaña activa para cambiar texto/colores
   @Input() pestanaActiva: string = 'Próximas';
+  //salidas: eventos que abren los modales correspondientes
   @Output() abrirModalCalificacion = new EventEmitter<void>();
   @Output() abrirModalRecordatorio = new EventEmitter<void>();
 
-  get textoBoton(): string {
-    return this.pestanaActiva === 'Próximas' ? 'Recordatorio' : 'Calificar';
-  }
+  //propiedad calculada: texto del botón según la pestaña
+  get textoBoton(): string { return this.pestanaActiva === 'Próximas' ? 'Recordatorio' : 'Calificar'; }
 
-  get colorBoton(): string {
-    return this.pestanaActiva === 'Próximas' ? '#0A4DA6' : '#DC8214';
-  }
+  //propiedad calculada: color del botón según la pestaña
+  get colorBoton(): string { return this.pestanaActiva === 'Próximas' ? '#0A4DA6' : '#DC8214'; }
 
+  //acción: al pulsar el botón decide qué modal abrir
   alCalificar() {
-    if (this.pestanaActiva === 'Anteriores') {
-      this.abrirModalCalificacion.emit();
-    } else {
-      this.abrirModalRecordatorio.emit();
-    }
+    if (this.pestanaActiva === 'Anteriores') { this.abrirModalCalificacion.emit(); }
+    else { this.abrirModalRecordatorio.emit(); }
   }
 }
