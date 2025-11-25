@@ -9,11 +9,13 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./tabs.component.css']
 })
 export class TabsComponent {
+  //entrada: lista de pestañas a mostrar
   @Input() pestanas: string[] = [];
+  //entrada: pestaña que actualmente está activa
   @Input() pestanaActiva: string = '';
+  //salida: emite la pestaña seleccionada
   @Output() cambioPestana = new EventEmitter<string>();
 
-  alClickPestana(pestana: string) {
-    this.cambioPestana.emit(pestana);
-  }
+  //acción: emitir cambio de pestaña al hacer click
+  alClickPestana(pestana: string) { this.cambioPestana.emit(pestana); }
 }

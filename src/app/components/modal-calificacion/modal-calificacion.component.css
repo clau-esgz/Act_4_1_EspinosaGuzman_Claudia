@@ -23,6 +23,8 @@
 .encabezado-modal {
   position: relative;
   display: flex;
+
+/* componente: estilos para el modal de calificación */
   align-items: center;
   justify-content: center;
   margin-bottom: 14px;
@@ -127,6 +129,4 @@
   transition: all 0.18s;
 }
 
-.btn-enviar:hover {
-  border-color: #FCB24B;
-}
+/* Hover for blue/yellow handled by global classes (.btn-azul, .btn-amarillo) */

@@ -1,19 +1,24 @@
 <header class="encabezado">
+  <!--componente: cabecera con logo, búsqueda e iconos-->
   <div class="contenido-encabezado">
     <div class="logo">[ Icon Placeholder ]</div>
     
+    <!--seccion: buscador-->
     <div class="contenedor-busqueda">
-      <svg class="icono-busqueda" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <circle cx="11" cy="11" r="8"/>
-        <path d="m21 21-4.35-4.35"/>
-      </svg>
-      <input 
-        type="text" 
-        class="entrada-busqueda" 
-        placeholder="Buscar"
-        (input)="alBuscar($event)">
+      <div class="busqueda-inner">
+        <svg class="icono-busqueda" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input 
+          type="text" 
+          class="entrada-busqueda" 
+          placeholder="Buscar"
+          (input)="alBuscar($event)">
+      </div>
     </div>
 
+    <!--seccion: iconos de navegación (mensajes, menú, inicio, buscar, perfil) -->
     <nav class="iconos-navegacion">
       <button 
         class="boton-icono" 

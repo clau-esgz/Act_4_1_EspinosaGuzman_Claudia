@@ -4,12 +4,13 @@
       <h2 class="titulo-modal">Establecer Recordatorio</h2>
       <button class="btn-cerrar" (click)="alCerrar()" aria-label="Cerrar">
         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="18" y1="6" x2="6" y2="18"/> <!-- icono cerrar -->
           <line x1="6" y1="6" x2="18" y2="18"/>
         </svg>
       </button>
     </div>
 
+    <!--opciones disponibles para el recordatorio-->
     <div class="opciones">
       <label class="opcion">
         <input type="radio" name="recordatorio" (change)="seleccionar('1 hora antes')">
@@ -26,7 +27,8 @@
     </div>
 
     <div class="acciones">
-      <button class="btn-enviar" (click)="alEstablecer()">Establecer</button>
+      <button class="btn-enviar btn-azul" (click)="alEstablecer()">Establecer</button>
     </div>
   </div>
 </div>
+  <!--modal: elegir cuándo recibir recordatorio-->

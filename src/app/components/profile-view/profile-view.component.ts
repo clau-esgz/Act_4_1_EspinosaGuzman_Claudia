@@ -15,43 +15,26 @@ import { ModalRecordatorioComponent } from '../modal-recordatorio/modal-recordat
   styleUrls: ['./profile-view.component.css']
 })
 export class ProfileViewComponent {
+  //pestañas mostradas en la vista de perfil
   pestanas = ['Próximas', 'Anteriores'];
+  //pestaña activa
   pestanaActiva = 'Próximas';
+  //estado de visualización de modales
   mostrarModal = false;
   mostrarModalRecordatorio = false;
 
+  //datos de ejemplo: lista de tutorías
   tutorias: Tutoria[] = [
-    {
-      nombreMateria: 'Nombre Materia',
-      fecha: '1-000',
-      horario: '',
-      numeroAlumnos: 0
-    },
-    {
-      nombreMateria: 'Nombre Materia',
-      fecha: '1-0XX',
-      horario: '',
-      numeroAlumnos: 0
-    }
+    { nombreMateria: 'Nombre Materia', fecha: '1-000', horario: '', numeroAlumnos: 0 },
+    { nombreMateria: 'Nombre Materia', fecha: '1-0XX', horario: '', numeroAlumnos: 0 }
   ];
 
-  alCambioPestana(pestana: string) {
-    this.pestanaActiva = pestana;
-  }
+  //acción: cambiar la pestaña activa
+  alCambioPestana(pestana: string) { this.pestanaActiva = pestana; }
 
-  abrirModal() {
-    this.mostrarModal = true;
-  }
-
-  cerrarModal() {
-    this.mostrarModal = false;
-  }
-
-  abrirModalRecordatorio() {
-    this.mostrarModalRecordatorio = true;
-  }
-
-  cerrarModalRecordatorio() {
-    this.mostrarModalRecordatorio = false;
-  }
+  //acciones: mostrar/ocultar modales
+  abrirModal() { this.mostrarModal = true; }
+  cerrarModal() { this.mostrarModal = false; }
+  abrirModalRecordatorio() { this.mostrarModalRecordatorio = true; }
+  cerrarModalRecordatorio() { this.mostrarModalRecordatorio = false; }
 }
