@@ -1,0 +1,38 @@
+<div class="overlay" (click)="alCerrar()">
+  <div class="modal" (click)="$event.stopPropagation()">
+    <div class="encabezado-modal">
+      <h2 class="titulo-modal">Retroalimentación</h2>
+      <button class="btn-cerrar" (click)="alCerrar()" aria-label="Cerrar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"/>
+          <line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+    </div>
+
+    <textarea 
+      class="area-comentario"
+      placeholder="Escribe un comentario..."
+      (input)="alCambiarComentario($event)"
+      rows="4"></textarea>
+
+    <div class="contenedor-calificacion">
+      <div class="estrellas">
+        <button
+          *ngFor="let estrella of [1, 2, 3, 4, 5]"
+          class="btn-estrella"
+          [class.activa]="estrella <= calificacion"
+          (click)="seleccionarCalificacion(estrella)"
+          aria-label="Calificar con {{ estrella }} estrellas">
+          <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+          </svg>
+        </button>
+      </div>
+
+      <button class="btn-enviar" (click)="alEnviar()">
+        Enviar
+      </button>
+    </div>
+  </div>
+</div>

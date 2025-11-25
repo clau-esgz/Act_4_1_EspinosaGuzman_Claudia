@@ -1,0 +1,21 @@
+.contenedor-pestanas {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.boton-pestana {
+  background: #b0b0b0;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.boton-pestana.activa {
+  background: #cc00cc;
+}

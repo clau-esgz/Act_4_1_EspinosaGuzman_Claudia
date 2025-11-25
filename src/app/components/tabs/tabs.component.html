@@ -1,0 +1,9 @@
+<div class="contenedor-pestanas">
+  <button 
+    *ngFor="let pestana of pestanas"
+    [class.activa]="pestana === pestanaActiva"
+    class="boton-pestana"
+    (click)="alClickPestana(pestana)">
+    {{ pestana }}
+  </button>
+</div>

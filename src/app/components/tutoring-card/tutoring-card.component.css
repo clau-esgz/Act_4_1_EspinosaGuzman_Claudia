@@ -1,0 +1,67 @@
+.tarjeta-tutoria {
+  background: #d9d9d9;
+  border-radius: 8px;
+  padding: 16px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.info-tutoria {
+  flex: 1;
+}
+
+.materia {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0 0 8px 0;
+  color: #000000;
+}
+
+.detalles-tutoria {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.detalle-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.etiqueta {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.valor {
+  font-size: 14px;
+  color: #000000;
+  font-weight: 400;
+}
+
+.icono-alumnos {
+  color: #0A4DA6;
+  width: 18px;
+  height: 18px;
+}
+
+.btn-calificar {
+  background: #DC8214;
+  color: white;
+  border: 3px solid #DC8214;
+  border-radius: 20px;
+  padding: 8px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.btn-calificar:hover {
+  border-color: #FCB24B;
+}

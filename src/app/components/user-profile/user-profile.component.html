@@ -1,0 +1,30 @@
+<div class="tarjeta-perfil">
+  <h2 class="titulo">Mi perfil</h2>
+  
+  <div class="contenido-perfil">
+    <div class="contenedor-avatar">
+      <div class="avatar">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
+        </svg>
+      </div>
+      <button class="btn-editar" (click)="alEditar()">
+        Editar
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="info-perfil">
+      <h3 class="nombre">{{ nombre }}</h3>
+      <p class="descripcion">{{ descripcion }}</p>
+      <p class="correo">{{ correo }}</p>
+    </div>
+
+    <button class="btn-cerrar-sesion" (click)="alCerrarSesion()">
+      Cerrar sesión
+    </button>
+  </div>
+</div>

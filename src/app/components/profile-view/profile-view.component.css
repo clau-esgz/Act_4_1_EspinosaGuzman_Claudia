@@ -1,0 +1,24 @@
+.vista-perfil {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 28px 24px;
+  padding-top: 24px;
+}
+
+.seccion-tutorias {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.titulo-seccion {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0 0 16px 0;
+  color: #1a1a1a;
+}
+
+.lista-tutorias {
+  margin-top: 16px;
+}

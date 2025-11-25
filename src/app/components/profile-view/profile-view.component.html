@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="vista-perfil">
+  <app-user-profile></app-user-profile>
+
+  <div class="seccion-tutorias">
+    <h2 class="titulo-seccion">Mis tutorías</h2>
+    
+    <app-tabs 
+      [pestanas]="pestanas" 
+      [pestanaActiva]="pestanaActiva"
+      (cambioPestana)="alCambioPestana($event)">
+    </app-tabs>
+
+    <div class="lista-tutorias">
+      <app-tutoring-card 
+        *ngFor="let tutoria of tutorias"
+        [tutoria]="tutoria"
+        [pestanaActiva]="pestanaActiva"
+        (abrirModalCalificacion)="abrirModal()"
+        (abrirModalRecordatorio)="abrirModalRecordatorio()">
+      </app-tutoring-card>
+    </div>
+  </div>
+</div>
+
+<app-modal-calificacion 
+  *ngIf="mostrarModal"
+  (cerrar)="cerrarModal()">
+</app-modal-calificacion>
+
+<app-modal-recordatorio
+  *ngIf="mostrarModalRecordatorio"
+  (cerrar)="cerrarModalRecordatorio()">
+</app-modal-recordatorio>
